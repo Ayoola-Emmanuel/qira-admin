@@ -1,0 +1,16 @@
+/* src/styles/quillCustomStyles.css */
+.ql-container {
+  border: none !important;
+}
+
+.ql-editor {
+  border: none !important;
+  padding: 0;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 16px; /* Adjus
+  t padding if necessary */
+}
+
+.ql-toolbar {
+  border: none !important;
+}
