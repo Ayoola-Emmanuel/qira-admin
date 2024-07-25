@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import InputField from "../../../components/InputField";
 
 const Overview = ({ close }) => {
@@ -13,6 +13,8 @@ const Overview = ({ close }) => {
     bankName: "",
   });
 
+  const modalRef = useRef(null);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormInput({
@@ -20,9 +22,26 @@ const Overview = ({ close }) => {
       [name]: value,
     });
   };
+
+  const handleClickOutside = (event) => {
+    if (modalRef.current && !modalRef.current.contains(event.target)) {
+      close();
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-[2000]">
-      <div className="bg-white p-10 rounded-lg w-4/5 mx-auto max-h-screen overflow-y-auto my-20">
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-30 z-[2000]">
+      <div
+        ref={modalRef}
+        className="bg-white p-10 rounded-lg w-4/5 mx-auto max-h-screen overflow-y-auto my-20"
+      >
         <div className="rounded-md card-shadow p-5 mb-9">
           <h4 className="text-[#080746] font-medium text-xl mb-5">Overview</h4>
           <div>

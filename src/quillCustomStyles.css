@@ -1,6 +1,6 @@
 /* src/styles/quillCustomStyles.css */
 .ql-container {
-  border: none !important;
+  border: 1px;
 }
 
 .ql-editor {

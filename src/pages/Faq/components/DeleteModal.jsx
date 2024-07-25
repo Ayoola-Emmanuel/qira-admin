@@ -26,7 +26,7 @@ const DeleteModal = ({ closeDeleteModal, idx, close }) => {
     });
   };
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-[2000]">
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-30 z-[2000]">
       <div className="bg-white p-10 rounded-lg w-[26rem] mx-auto">
         <div className="flex justify-center text-[#FF2730] text-8xl mb-4">
           <AiOutlineCloseCircle />
@@ -36,7 +36,7 @@ const DeleteModal = ({ closeDeleteModal, idx, close }) => {
             Delete FAQ?
           </h6>
           <p>
-            Are you sure you want to do this? This process can <br></br>not be
+            Are you sure you want to do this? <br></br>This process can not be
             undone.
           </p>
         </div>

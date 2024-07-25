@@ -29,7 +29,7 @@ const DeleteModal = ({ closeDeleteModal, idx, close }) => {
             Delete Terms?
           </h6>
           <p>
-            Are you sure you want to do this? This process can <br></br>not be
+            Are you sure you want to do this? <br></br>This process can not be
             undone.
           </p>
         </div>
